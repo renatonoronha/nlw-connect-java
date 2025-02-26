@@ -5,11 +5,11 @@
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ## Tabela de conteúdos
-- [Descrição](#Descrição)
-- [Pré-requisitos](#Pré-requisitos)
-- [Instalação](#Instalação)
-- [Utilização](#Utilização)
-- [API Endpoints](#API Endpoints)
+- [Descrição](#descricao)
+- [Pré-requisitos](#pre-requisitos)
+- [Instalação](#instalação)
+- [Utilização](#utilização)
+- [API Endpoints](#api-endpoints)
 
 ## Descrição
 Esse projeto é uma API de um sistema de inscrições em eventos feita com Java, Spring Boot e com MySQL como banco de dados. Essa API foi desenvolvida durante o evento da NLW Connect organizado pela Rocketseat e com o auxílio do professor Isidro.
