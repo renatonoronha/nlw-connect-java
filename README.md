@@ -16,10 +16,10 @@ Esse projeto é uma API de um sistema de inscrições em eventos feita com Java,
 
 ## Pré-requisitos
 
-- Java
-- Maven
+- Java 21
 - Docker 27.5.1
 - MySQL Workbench 8.0.41
+- Maven
 - Postman
 
 ## Instalação
