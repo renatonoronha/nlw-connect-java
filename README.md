@@ -7,10 +7,6 @@
 ## Descrição
 Esse projeto é uma API de um sistema de inscrições em eventos feita com Java, Spring Boot e com MySQL como banco de dados. Essa API foi desenvolvida durante o evento da NLW Connect organizado pela Rocketseat e com o auxílio do professor Isidro.
 
-##  API Endpoints
-### POST /events
-Cria um novo evento
-
 ## Pré-requisitos
 
 - Docker 27.5.1
@@ -23,6 +19,10 @@ Cria um novo evento
 - No MySQL Workbench crie uma nova conexão, você pode colocar o nome que quiser. Para testar a conexão clique em test connection na primeira página que apareceu, você deve inserir a senha definida no arquivo docker-compose.yml 'mysql'. Se aparecer uma tela com um aviso de connection warning clique em continue anyway, se tudo der certo, deve aparecer uma mensagem dizendo que a conexão foi feita com sucesso, em seguida é só clicar ok nessa página e ok na página que inserimos o nome da conexão.
 - Quando você abrir a conexão clique em File (ou arquivo) e Open SQL Script (ou Ctrl + Shift + O), em seguida você deve procurar o arquivo db_events.sql dentro da pasta data do projeto e selecioná-la. Quando o script tiver sido importada, rode o script clicando no raio mais a esquerda
   Pronto seu banco de dados está pronto, agora você pode iniciar sua aplicação e testar enviando requisições no postman
+
+##  API Endpoints
+### POST /events
+Cria um novo evento
 
 Requisição
 ```
