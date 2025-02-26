@@ -41,7 +41,7 @@ git clone https://github.com/renatonoronha/nlw-connect-java.git
 
 ## Utilização
 1. Inicie a aplicação com Maven
-2. A API vai estar acessível no endereço web: http:
+2. A API vai estar acessível no endereço web: http://localhost:8080
 
 ##  API Endpoints
 ### POST /events
