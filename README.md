@@ -4,6 +4,13 @@
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
+## Tabela de conteúdos
+- [Descrição](#Descrição)
+- [Pré-requisitos](#Pré-requisitos)
+- [Instalação](#Instalação)
+- [Utilização](#Utilização)
+- [API Endpoints](#API Endpoints)
+
 ## Descrição
 Esse projeto é uma API de um sistema de inscrições em eventos feita com Java, Spring Boot e com MySQL como banco de dados. Essa API foi desenvolvida durante o evento da NLW Connect organizado pela Rocketseat e com o auxílio do professor Isidro.
 
@@ -15,10 +22,24 @@ Esse projeto é uma API de um sistema de inscrições em eventos feita com Java,
 
 ## Instalação
 
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/renatonoronha/nlw-connect-java.git
+```
+
+2. Instale as dependências com o Maven
+
+3. Instale o MySQL Workbench
+
 - No terminal entre na pasta data e rode o comando `docker compose up`. A partir daí o Docker irá baixar a imagem do MySQL e iniciar o container
 - No MySQL Workbench crie uma nova conexão, você pode colocar o nome que quiser. Para testar a conexão clique em test connection na primeira página que apareceu, você deve inserir a senha definida no arquivo docker-compose.yml 'mysql'. Se aparecer uma tela com um aviso de connection warning clique em continue anyway, se tudo der certo, deve aparecer uma mensagem dizendo que a conexão foi feita com sucesso, em seguida é só clicar ok nessa página e ok na página que inserimos o nome da conexão.
 - Quando você abrir a conexão clique em File (ou arquivo) e Open SQL Script (ou Ctrl + Shift + O), em seguida você deve procurar o arquivo db_events.sql dentro da pasta data do projeto e selecioná-la. Quando o script tiver sido importada, rode o script clicando no raio mais a esquerda
   Pronto seu banco de dados está pronto, agora você pode iniciar sua aplicação e testar enviando requisições no postman
+
+## Utilização
+1. Inicie a aplicação com Maven
+2. A API vai estar acessível no endereço web: http:
 
 ##  API Endpoints
 ### POST /events
