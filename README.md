@@ -16,6 +16,8 @@ Esse projeto é uma API de um sistema de inscrições em eventos feita com Java,
 
 ## Pré-requisitos
 
+- Java
+- Maven
 - Docker 27.5.1
 - MySQL Workbench 8.0.41
 - Postman
@@ -28,7 +30,7 @@ Esse projeto é uma API de um sistema de inscrições em eventos feita com Java,
 git clone https://github.com/renatonoronha/nlw-connect-java.git
 ```
 
-2. Instale as dependências com o Maven
+2. Instale as dependências com o Maven: `mvn clean install`
 
 3. Instale o MySQL Workbench
 
@@ -176,4 +178,6 @@ Resposta
 	} 
 }
 ```
+
+## Licença
 
