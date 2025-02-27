@@ -91,7 +91,7 @@ docker compose up
 
 - Dentro da conexão você irá importar o arquivo db_events.sql que está dentro da pasta "data" deste projeto
 
-<img src="img/passo9.png" align="center" width="387" height="217">
+<img src="img/passo9.png" align="center" width="581" height="326">
 
 - Execute o script
 
