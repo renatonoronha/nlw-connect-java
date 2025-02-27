@@ -93,7 +93,7 @@ docker compose up
 
 <img src="img/passo9.png" align="center" width="773" height="434">
 
-- Clique em executar o script
+- Execute o script
 
 <img src="img/passo10.png" align="center">
 
