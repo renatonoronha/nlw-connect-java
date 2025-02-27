@@ -11,16 +11,22 @@
 - [Utilização](#utilização)
 - [API Endpoints](#api-endpoints)
 
+<br>
+
 ## Descrição
-Esse projeto é uma API de um sistema de inscrições em eventos feita com Java, Spring Boot e com MySQL como banco de dados. Essa API foi desenvolvida durante o evento da NLW Connect organizado pela Rocketseat e com o auxílio do professor Isidro.
+Esse projeto é uma API de um sistema de inscrições em eventos feita com Java, Spring Boot e com MySQL como banco de dados. Essa API foi desenvolvida durante o evento da NLW Connect organizado pela Rocketseat e com as instruções do professor Isidro.
+
+<br>
 
 ## Pré-requisitos
 
 - Java 21
-- Docker 27.5.1
-- MySQL Workbench 8.0.41
 - Maven
+- Docker
+- MySQL Workbench 8.0
 - Postman
+
+<br>
 
 ## Instalação
 
@@ -58,57 +64,68 @@ docker compose up
 
 <img src="img/passo1.png" align="center">
 
+<br>
+
 - Para testar a conexão clique em test connection e digite a senha definida no arquivo docker-compose.yml: 'mysql'
 
 <img src="img/passo2.png" align="center" width="489" height="306">
 
 <br>
-<br>
 
 <img src="img/passo3.png" align="center" width="420" height="220">
- 
+
+<br>
+
 - Se tudo der certo deve aparecer uma janela "Connection Warning", clique em Continue Anyway e então aparecerá outra janela informando que a conexão foi bem sucedida, clique em ok
 
 <img src="img/passo4.png" align="center">
 
 <br>
-<br>
 
 <img src="img/passo5.png" align="center">
+
+<br>
 
 - Clique em ok para criar a conexão
 
 <img src="img/passo6.png" align="center" width="489" height="306">
 
 <br>
-<br>
 
 <img src="img/passo7.png" align="center">
+
+<br>
 
 - Quando for entrar na conexão uma janela de "Connection Warning" aparecerá, clique em Continue Anyway
 
 <img src="img/passo8.png" align="center" width="640" height="343">
 
-- Dentro da conexão você irá importar o arquivo db_events.sql que está dentro da pasta "data" deste projeto
+<br>
+
+- Dentro da conexão você irá importar o arquivo db_events.sql que está dentro da pasta "data" deste projeto e executar o script
 
 <img src="img/passo9.png" align="center" width="581" height="326">
 
-- Execute o script
+<br>
 
 <img src="img/passo10.png" align="center" width="515" height="290">
 
-<br>
 <br>
 
 - No canto superior esquerdo, na janela de Navigator as tabelas devem aparecer, caso não apareça clique no botão de atualizar
 
 <img src="img/passo11.png" align="center">
 
-- Pronto seu banco de dados está configurado, agora a aplicação pode ser iniciada e as requisições podem ser enviadas pelo postman
+<br>
+<br>
+
+Pronto seu banco de dados está configurado, agora a aplicação pode ser iniciada e as requisições podem ser enviadas pelo postman
 
 ## Utilização
 1. Inicie a aplicação com Maven
 2. A API vai estar acessível no endereço web: http://localhost:8080
+
+<br>
 
 ##  API Endpoints
 ### POST /events
@@ -246,5 +263,8 @@ Resposta
 }
 ```
 
+<br>
+
 ## Licença
 
+Esse projeto possui a licença MIT
