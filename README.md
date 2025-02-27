@@ -134,8 +134,11 @@ Pronto seu banco de dados está configurado, agora a aplicação pode ser inicia
 <br>
 
 ##  API Endpoints
+
 ### POST /events
 Cria um novo evento
+
+<br>
 
 ```
 Requisição:
@@ -170,27 +173,31 @@ Resposta:
 ### GET /events
 Lista todos os eventos
 
+<br>
+
 ```
 Resposta:
 
 [
-	{ 
-	    "id": 1, 
-	    "title":"CodeCraft Summit 2025", 
-	    "prettyName":"codecraft-summit-2025", 
-	    "location":"Online", 
-	    "price":0.0, 
-	    "startDate":"2025-03-16", 
-	    "endDate":"2025-03-18", 
-	    "startTime":"19:00:00", 
-	    "endTime":"21:00:00" 
-	}, 
-	... 
+    { 
+        "id": 1, 
+        "title":"CodeCraft Summit 2025", 
+        "prettyName":"codecraft-summit-2025", 
+        "location":"Online", 
+        "price":0.0, 
+        "startDate":"2025-03-16", 
+        "endDate":"2025-03-18", 
+        "startTime":"19:00:00", 
+        "endTime":"21:00:00" 
+    }, 
+    ... 
 ]
 ```
 
 ### GET /events/PRETTY_NAME
 Recupera um evento pelo seu Pretty Name
+
+<br>
 
 ```
 Exemplo: http://localhost:8080/events/codecraft-summit-2025
@@ -213,6 +220,8 @@ Resposta:
 ### POST /subscription/PRETTY_NAME
 Realiza a inscrição em um evento
 
+<br>
+
 ```
 Requisição esperada:
 
@@ -232,6 +241,10 @@ Resposta esperada:
 ```
 
 ### GET /subscription/PRETTY_NAME/ranking
+Exibe o ranking dos 3 usuários que mais tiveram número de inscritos por indicação
+
+<br>
+
 ```
 Exemplo: //localhost:8080/subscription/codecraft-summit-2025/ranking:
 
@@ -255,6 +268,8 @@ Resposta:
 
 ### GET /subscription/PRETTY_NAME/ranking/USERID
 Recupera o número de inscritos que efetivaram sua participação no evento indicados por um determinado usuário (UserId), bem como sua colocação no ranking geral
+
+<br>
 
 ```
 Exemplo: //localhost:8080/subscription/codecraft-summit-2025/ranking/123
