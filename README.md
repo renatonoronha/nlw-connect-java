@@ -30,14 +30,81 @@ Esse projeto é uma API de um sistema de inscrições em eventos feita com Java,
 git clone https://github.com/renatonoronha/nlw-connect-java.git
 ```
 
-2. Instale as dependências com o Maven: `mvn clean install`
+2. Navegue para o diretório do projeto
 
-3. Instale o MySQL Workbench
+```bash
+cd nlw-connect-java.git
+```
 
-- No terminal entre na pasta data e rode o comando `docker compose up`. A partir daí o Docker irá baixar a imagem do MySQL e iniciar o container
-- No MySQL Workbench crie uma nova conexão, você pode colocar o nome que quiser. Para testar a conexão clique em test connection na primeira página que apareceu, você deve inserir a senha definida no arquivo docker-compose.yml 'mysql'. Se aparecer uma tela com um aviso de connection warning clique em continue anyway, se tudo der certo, deve aparecer uma mensagem dizendo que a conexão foi feita com sucesso, em seguida é só clicar ok nessa página e ok na página que inserimos o nome da conexão.
-- Quando você abrir a conexão clique em File (ou arquivo) e Open SQL Script (ou Ctrl + Shift + O), em seguida você deve procurar o arquivo db_events.sql dentro da pasta data do projeto e selecioná-la. Quando o script tiver sido importada, rode o script clicando no raio mais a esquerda
-  Pronto seu banco de dados está pronto, agora você pode iniciar sua aplicação e testar enviando requisições no postman
+3. Instale as dependências com o Maven: 
+
+```bash
+mvn clean install
+```
+
+4. Navegue para o para a pasta "data":
+
+```bash
+cd events/src/main/java/br/dev/renatofreitas/events/data
+```
+
+5. Inicie o Docker e execute o comando:
+
+```bash
+docker compose up
+```
+
+6. Crie uma nova conexão no MySQL Workbench
+
+<img src="img/passo1.png" align="center">
+
+- Para testar a conexão clique em test connection e digite a senha definida no arquivo docker-compose.yml: 'mysql'
+
+<img src="img/passo2.png" align="center" width="489" height="306">
+
+<br>
+<br>
+
+<img src="img/passo3.png" align="center" width="420" height="220">
+ 
+- Se tudo der certo deve aparecer uma janela "Connection Warning", clique em Continue Anyway e então aparecerá outra janela informando que a conexão foi bem sucedida, clique em ok
+
+<img src="img/passo4.png" align="center">
+
+<br>
+<br>
+
+<img src="img/passo5.png" align="center">
+
+- Clique em ok para criar a conexão
+
+<img src="img/passo6.png" align="center" width="489" height="306">
+
+<br>
+<br>
+
+<img src="img/passo7.png" align="center">
+
+- Quando for entrar na conexão uma janela de "Connection Warning" aparecerá, clique em Continue Anyway
+
+<img src="img/passo8.png" align="center" width="960" height="514">
+
+- Dentro da conexão você irá importar o arquivo db_events.sql que está dentro da pasta "data" deste projeto
+
+<img src="img/passo9.png" align="center" width="773" height="434">
+
+- Clique em executar o script
+
+<img src="img/passo10.png" align="center">
+
+<br>
+<br>
+
+- No canto superior esquerdo, na janela de Navigator as tabelas devem aparecer, caso não apareça clique no botão de atualizar
+
+<img src="img/passo11.png" align="center">
+
+- Pronto seu banco de dados está configurado, agora a aplicação pode ser iniciada e as requisições podem ser enviadas pelo postman
 
 ## Utilização
 1. Inicie a aplicação com Maven
