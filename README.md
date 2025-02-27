@@ -264,7 +264,7 @@ Resposta esperada:
 <br>
 
 ### GET /subscription/PRETTY_NAME/ranking
-Exibe o ranking dos 3 usuários que mais tiveram número de inscritos por indicação
+Exibe o ranking dos 3 usuários que mais tiveram número de inscritos por indicação em um evento
 
 <br>
 
@@ -313,16 +313,18 @@ Resposta:
 
 <br>
 
-## Rodmap
+## 🚀 Rodmap
 
 - Adicionar mensagem de erro se um usuário tentar se inscrever em um evento com um link que não existe (com o link de um usuário que não está cadastrado nesse evento)
 - Criar a funcionalidade de excluir um evento
 - Criar a funcionalidade de alterar um evento
 - Criar a funcionalidade de excluir uma inscrição
 - Criar a funcionalidade de alterar uma inscrição
+- Tornar o número de inscrição particular para cada evento (Atualmente o número de iscrição conta todos os eventos)
+- [Em análise] Criar um sistema de cadastro de organizações: cada organização pode criar eventos; é possível pesquisar eventos por organização; o número de inscrições pode ser particular por organização ou por evento; etc.
 
 <br>
 
-## 📃Licença
+## 📃 Licença
 
 Esse projeto possui a licença [MIT](./LICENSE)
