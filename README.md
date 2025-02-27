@@ -26,6 +26,8 @@ Esse projeto é uma API de um sistema de inscrições em eventos feita com Java,
 - MySQL Workbench 8.0
 - Postman
 
+> OBS: Você pode instalar o MySQL na sua máquina em vez de utilizar o Docker, nesse caso você pode pular os passos 4 e 5 da instalação
+
 <br>
 
 ## Instalação
@@ -67,6 +69,7 @@ docker compose up
 <br>
 
 - Para testar a conexão clique em test connection e digite a senha definida no arquivo docker-compose.yml: 'mysql'
+- Caso você esteja utilizando o MySQL local utilize a senha que você definiu
 
 <img src="img/passo2.png" align="center" width="489" height="306">
 
@@ -97,6 +100,7 @@ docker compose up
 <br>
 
 - Quando for entrar na conexão uma janela de "Connection Warning" aparecerá, clique em Continue Anyway
+- Caso esteja utilizando o MySQL local essa janela não aparecerá
 
 <img src="img/passo8.png" align="center" width="640" height="343">
 
@@ -121,6 +125,8 @@ docker compose up
 
 Pronto seu banco de dados está configurado, agora a aplicação pode ser iniciada e as requisições podem ser enviadas pelo postman
 
+<br>
+
 ## Utilização
 1. Inicie a aplicação com Maven
 2. A API vai estar acessível no endereço web: http://localhost:8080
@@ -131,10 +137,11 @@ Pronto seu banco de dados está configurado, agora a aplicação pode ser inicia
 ### POST /events
 Cria um novo evento
 
-Requisição
 ```
+Requisição:
+
 { 
-	"name":"CodeCraft Summit 2025", 
+	"title":"CodeCraft Summit 2025", 
 	"location":"Online", 
 	"price":0.0, 
 	"startDate":"2025-03-16", 
@@ -144,11 +151,12 @@ Requisição
 }
 ```
 
-Resposta
 ```
+Resposta:
+
 { 
 	"id": 1, 
-	"name":"CodeCraft Summit 2025", 
+	"title":"CodeCraft Summit 2025", 
 	"prettyName":"codecraft-summit-2025", 
 	"location":"Online",
 	"price":0.0, 
@@ -162,13 +170,13 @@ Resposta
 ### GET /events
 Lista todos os eventos
 
-Resposta
-
 ```
+Resposta:
+
 [
 	{ 
 		"id": 1, 
-		"name":"CodeCraft Summit 2025", 
+		"title":"CodeCraft Summit 2025", 
 		"prettyName":"codecraft-summit-2025", 
 		"location":"Online", 
 		"price":0.0, 
@@ -184,13 +192,14 @@ Resposta
 ### GET /events/PRETTY_NAME
 Recupera um evento pelo seu Pretty Name
 
-Exemplo: `http://localhost:8080/events/codecraft-summit-2025`
-
-Resposta
 ```
+Exemplo: http://localhost:8080/events/codecraft-summit-2025
+
+Resposta:
+
 { 
 	"id": 1, 
-	"name":"CodeCraft Summit 2025", 
+	"title":"CodeCraft Summit 2025", 
 	"prettyName":"codecraft-summit-2025", 
 	"location":"Online", 
 	"price":0.0, 
@@ -204,18 +213,18 @@ Resposta
 ### POST /subscription/PRETTY_NAME
 Realiza a inscrição em um evento
 
-Requisição esperada
-
 ```
+Requisição esperada:
+
 { 
 	"userName":"John Doe", 
 	"email":"john@doe.com" 
 }
 ```
 
-Resposta esperada
+```
+Resposta esperada:
 
-```b
 { 
 	"subscriptionNumber":1, 
 	"designation": "https://devstage.com/codecraft-summit-2025/123" 
@@ -223,12 +232,11 @@ Resposta esperada
 ```
 
 ### GET /subscription/PRETTY_NAME/ranking
-
-Exemplo: `//localhost:8080/subscription/codecraft-summit-2025/ranking`
-
-Resposta
-
 ```
+Exemplo: //localhost:8080/subscription/codecraft-summit-2025/ranking:
+
+Resposta:
+
 [ 
 	{ 
 		"userName":"John Doe", 
@@ -248,11 +256,11 @@ Resposta
 ### GET /subscription/PRETTY_NAME/ranking/USERID
 Recupera o número de inscritos que efetivaram sua participação no evento indicados por um determinado usuário (UserId), bem como sua colocação no ranking geral
 
-Exemplo: `//localhost:8080/subscription/codecraft-summit-2025/ranking/123`
-
-Resposta
-
 ```
+Exemplo: //localhost:8080/subscription/codecraft-summit-2025/ranking/123
+
+Resposta:
+
 { 
 	"rankingPosition":3, 
 	{ 
@@ -267,4 +275,4 @@ Resposta
 
 ## Licença
 
-Esse projeto possui a licença MIT
+Esse projeto possui a licença [MIT](./LICENSE)
