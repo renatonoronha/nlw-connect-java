@@ -27,7 +27,7 @@ Esse projeto é uma API de um sistema de inscrições em eventos feita com Java,
 4. **Visualização de Indicações**:
     - O usuário pode ver a quantidade de inscritos que ingressaram com seu link.
 
-- Atualmente a melhor utilização da aplicação é utilizando o MySQL localmente, mas está sendo trabalhado para que a utilização do Docker se torne viável
+> Atualmente a melhor utilização da aplicação é utilizando o MySQL localmente, mas está sendo trabalhado para que a utilização do Docker se torne viável
 
 <br>
 
