@@ -95,7 +95,7 @@ docker compose up
 
 - Execute o script
 
-<img src="img/passo10.png" align="center" width="773" height="434">
+<img src="img/passo10.png" align="center" width="515" height="290">
 
 <br>
 <br>
