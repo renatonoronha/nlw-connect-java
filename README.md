@@ -16,6 +16,17 @@
 ## Descrição
 Esse projeto é uma API de um sistema de inscrições em eventos feita com Java, Spring Boot e com MySQL como banco de dados. Essa API foi desenvolvida durante o evento da NLW Connect organizado pela Rocketseat e com as instruções do professor Isidro.
 
+**Requisitos Funcionais**
+
+1. **Inscrição**:
+    - O usuário pode se inscrever no evento usando nome e e-mail.
+2. **Geração de Link de Indicação**:
+    - O usuário pode gerar um link de indicação no evento em que inscreveu-se (um por inscrito).
+3. **Ranking de Indicações**:
+    - O usuário pode ver o ranking de indicações de um evento.
+4. **Visualização de Indicações**:
+    - O usuário pode ver a quantidade de inscritos que ingressaram com seu link.
+
 <br>
 
 ## Pré-requisitos
@@ -170,6 +181,8 @@ Resposta:
 }
 ```
 
+<br>
+
 ### GET /events
 Lista todos os eventos
 
@@ -194,6 +207,8 @@ Resposta:
 ]
 ```
 
+<br>
+
 ### GET /events/PRETTY_NAME
 Recupera um evento pelo seu Pretty Name
 
@@ -217,8 +232,14 @@ Resposta:
 }
 ```
 
+<br>
+
 ### POST /subscription/PRETTY_NAME
 Realiza a inscrição em um evento
+
+- Se o usuário já estiver cadastrado no banco de dados em outros eventos, a aplicação somente reutilizará seus dados para fazer a inscrição em um evento
+- O usuário não pode se inscrever duas vezes no mesmo evento. Se houver já uma inscrição no respectivo evento pelo usuário, uma mensagem de erro será exibida
+- Ao final da realização da inscrição, a resposta será um JSON com o número da inscrição no evento e o link para convite
 
 <br>
 
@@ -239,6 +260,8 @@ Resposta esperada:
     "designation": "https://devstage.com/codecraft-summit-2025/123" 
 }
 ```
+
+<br>
 
 ### GET /subscription/PRETTY_NAME/ranking
 Exibe o ranking dos 3 usuários que mais tiveram número de inscritos por indicação
@@ -266,6 +289,8 @@ Resposta:
 ]
 ```
 
+<br>
+
 ### GET /subscription/PRETTY_NAME/ranking/USERID
 Recupera o número de inscritos que efetivaram sua participação no evento indicados por um determinado usuário (UserId), bem como sua colocação no ranking geral
 
@@ -288,6 +313,16 @@ Resposta:
 
 <br>
 
-## Licença
+## Rodmap
+
+- Adicionar mensagem de erro se um usuário tentar se inscrever em um evento com um link que não existe (com o link de um usuário que não está cadastrado nesse evento)
+- Criar a funcionalidade de excluir um evento
+- Criar a funcionalidade de alterar um evento
+- Criar a funcionalidade de excluir uma inscrição
+- Criar a funcionalidade de alterar uma inscrição
+
+<br>
+
+## 📃Licença
 
 Esse projeto possui a licença [MIT](./LICENSE)
