@@ -14,7 +14,7 @@
 <br>
 
 ## Descrição
-Esse projeto é uma API de um sistema de inscrições em eventos feita com Java, Spring Boot e com MySQL como banco de dados. Essa API foi desenvolvida durante o evento da NLW Connect organizado pela Rocketseat e com as instruções do professor Isidro.
+Esse projeto é uma API de um sistema de inscrições em eventos feita com Java, Spring Boot e MySQL como banco de dados. Essa API foi desenvolvida durante o evento da NLW Connect organizado pela Rocketseat e com as instruções do professor Isidro.
 
 **Requisitos Funcionais**
 
@@ -26,6 +26,8 @@ Esse projeto é uma API de um sistema de inscrições em eventos feita com Java,
     - O usuário pode ver o ranking de indicações de um evento.
 4. **Visualização de Indicações**:
     - O usuário pode ver a quantidade de inscritos que ingressaram com seu link.
+
+- Atualmente a melhor utilização da aplicação é utilizando o MySQL localmente, mas está sendo trabalhado para que a utilização do Docker se torne viável
 
 <br>
 
@@ -139,8 +141,12 @@ Pronto seu banco de dados está configurado, agora a aplicação pode ser inicia
 <br>
 
 ## Utilização
+
 1. Inicie a aplicação com Maven
 2. A API vai estar acessível no endereço web: http://localhost:8080
+
+> Para parar o MySQL execute o comando `docker compose down`\
+> Para iniciar o MySQL novamente execute o comando `docker compose up`
 
 <br>
 
@@ -315,6 +321,7 @@ Resposta:
 
 ## 🚀 Rodmap
 
+- Atualmente o banco de dados não fica salvo entre utilizações da aplicação, irei alterar para que o banco de dados fique salvo
 - Adicionar mensagem de erro se um usuário tentar se inscrever em um evento com um link que não existe (com o link de um usuário que não está cadastrado nesse evento)
 - Criar a funcionalidade de excluir um evento
 - Criar a funcionalidade de alterar um evento
