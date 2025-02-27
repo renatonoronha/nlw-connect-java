@@ -87,7 +87,7 @@ docker compose up
 
 - Quando for entrar na conexão uma janela de "Connection Warning" aparecerá, clique em Continue Anyway
 
-<img src="img/passo8.png" align="center" width="960" height="514">
+<img src="img/passo8.png" align="center" width="640" height="343">
 
 - Dentro da conexão você irá importar o arquivo db_events.sql que está dentro da pasta "data" deste projeto
 
